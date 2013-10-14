@@ -1,0 +1,14 @@
+This repository contains the ROSETTA ontology of robotics devices and skills.
+
+rosetta.owl is a result of cooperative work done in the EU FP7 ROSETTA project and is based on earlier results (ontologies) from RoSta and SIARAS projects. Its goals and structure are documented in a number of papers, in particular in:
+[1] Mathias Haage,  Jacek Malec, Anders Nilsson, Klas Nilsson and Slawomir Nowaczyk. Declarative-knowledge-based reconfiguration of automation systems using a blackboard architecture, Proc. 11th Scandinavian Conference on Artificial Intelligence, Eds: Anders Kofod-Petersen, Fredrik Heintz and Helge Langseth, IOS Press, pp. 163--172, doi: 10.3233/978-1-60750-754-3-163, 2011.
+[2] Maj Stenmark and Jacek Malec. Knowledge-Based Industrial Robotics, Proc. 12th Scandinavian Conference on Artificial Intelligence, IOS Press, 2013.
+For more details please contact Jacek Malec, jacek.malec@cs.lth.se, or consult the page http://cs.lth.se/english/contact/malec-jacek/robotics-ontologies/.
+
+The ontology requires further work and polishing before reaching 1.0 status. The necessary fixes include:
+1. taking care of parameters and properties in a systematic way;
+2. taking away non-essential individuals, mostly inserted there during testing;
+3. making up the mind regarding which unit ontology to link to;
+4. better documentation, both included in the ontology and an external one.
+
+Any comments and fixes are appreciated. jacek.malec@cs.lth.se
