@@ -1,0 +1,57 @@
+QUDT ontology has been inconsistent, both in versions 1.0, originally
+adopted in Rosetta work, and in 1.1, adopted in hope that problems
+have been resolved.
+
+Manner of verifying it: 
+
+loading http://data.qudt.org/qudt/owl/1.0.0/dimension.owl
+into Protege 4.1.0 (build 239) with Hermit 1.3.8 as reasoner yields
+inconsistency.
+loading http://data.qudt.org/qudt/owl/1.0.0/dimension.owl
+into Protege 3.5 (version 14.0) withPellet 1.5.2 as reasoner yields
+inconsistency.
+
+loading http://data.qudt.org/qudt/owl/1.0.0/quantity.owl
+into Protege 4.1.0 (build 239) with Hermit 1.3.8 as reasoner yields
+inconsistency.
+
+loading http://data.qudt.org/qudt/owl/1.0.0/qudt.owl
+into Protege 4.1.0 (build 239) with Hermit 1.3.8 as reasoner yields
+no errors: this ontology is consistent.
+
+loading http://data.qudt.org/qudt/owl/1.0.0/unit.owl
+into Protege 4.1.0 (build 239) with Hermit 1.3.8 as reasoner yields
+inconsistency.
+
+loading http://qudt.org/1.1/vocab/dimensionalunit
+into Protege 4.1.0 (build 239) with Hermit 1.3.8 as reasoner yields
+inconsistency.
+
+Protege 4.3.0 (build 304) yields the same results as above on all five
+files.
+
+(It has been quoted here, as this behaviour might be a peculiarity of
+a combination ontology editor + reasoner, rather than an actual
+inconsitency in the logical sense. However, the explanations provided
+by the reasoner, together with repeatability of the issue, suggests
+that an actual inconsistency is present.)
+
+It has been decided that fixing the issue (requires substantial
+changes in several files, both vocabulaty ontologies, and 
+schemas) would require publishing a new variant of the qudt. In order
+to make it usable via import by other ontologies (e.g. rosetta.owl and
+other related ones) and to adhere to the license (Creative Commons
+Attribution-Share Alike 3.0 United States License), it would require a
+complex effort with refactoring (in order to not mix URIs of the
+original QUDT ontologies and the modified ones) and to make sure that
+inclusion is clear with respect to what ontology is being used.
+
+Therefore it has been deemed appropriate to find and try another quantity and
+dimensions ontology in the context of Rosetta. The choice has been the
+Ontology of units of Measure and related concepts (OM) (cite: Hajo
+Rijgersberg, Mark van Assem and Jan Top, Ontology of Units of Measure
+and Related Concepts, Semantic Web Journal, 4(1), pp. 3--13, 2012.)
+available at http://www.wurvoc.org/vocabularies/om-1.8/ 
+The cited article explains in relative detail design differences
+between OM and QUDT. It seems that they are of no importance for rosetta.owl.
+
